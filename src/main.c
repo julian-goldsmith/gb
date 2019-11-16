@@ -117,3 +117,4 @@ void mem_set(unsigned char* dest, unsigned char value, unsigned int n)
 		*dest++ = value;
 	}
 }
+

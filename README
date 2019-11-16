@@ -1,0 +1,7 @@
+This repository contains the start of a game for the original GameBoy.  The code was started in January 2016 by Julian Goldsmith, based on older assembly code.  It draws sprites and scrolling backgrounds, and takes input.
+
+Compiled with the GBDK compiler.
+
+start.asm is a modified version of crt0.s from GBDK.
+
+You will have issues if the maps and tiles aren't marked "const".  GBTD and GBMB don't do this on their own, so you'll have to replace the "const" manually when you export new maps or tiles.

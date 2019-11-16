@@ -48,6 +48,7 @@ void e_init()
 void e_all_think()
 {
 	unsigned int i;
+	e_thinkfn_t* thinkfn;
 	e_generic_t *e = entity_list;
 	
 	for(i = 0; i < 64; i++)
@@ -59,7 +60,10 @@ void e_all_think()
 				while(1);
 			}
 			
-			e_thinkfn_table[e->type](e);
+			thinkfn = e_thinkfn_table[e->type];
+
+			//e_thinkfn_table[e->type](e);
+			(*thinkfn)(e);
 		}
 		
 		e++;

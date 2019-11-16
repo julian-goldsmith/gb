@@ -1,7 +1,7 @@
 // entities
 // full length is 16
 // type 0x00 is invalid
-typedef struct
+typedef struct e_generic_s
 {
 	unsigned char type;
 	unsigned char alive;
@@ -9,7 +9,7 @@ typedef struct
 } e_generic_t;
 
 // type 0x01
-typedef struct
+typedef struct e_player_s
 {
 	unsigned char type;
 	unsigned char alive;
@@ -21,7 +21,7 @@ typedef struct
 } e_player_t;
 
 // type 0x02
-typedef struct
+typedef struct e_projectile_s
 {
 	unsigned char type;
 	unsigned char alive;
@@ -48,3 +48,4 @@ void e_all_draw();
 #define E_TYPE_GENERIC		0
 #define E_TYPE_PLAYER		1
 #define E_TYPE_PROJECTILE	2
+
